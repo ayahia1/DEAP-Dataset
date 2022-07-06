@@ -102,6 +102,8 @@ def main(classify_type: str = typer.Argument(..., help="The classification Type:
     x_train, y_train, x_test, y_test = prepare_dataset(classify_name, pca=fs_pca, mrmr=fs_mrmr, pso=fs_pso, gwo=fs_gwo,
                                                        cs=fs_cs)
 
+    # Abdel_Note: The data we want after feature extraction is in x_train, y_train, x_test, y_test
+    
     print("Training: ", x_train.shape, y_train.shape)
     print("Test: ", x_test.shape, y_test.shape)
 
